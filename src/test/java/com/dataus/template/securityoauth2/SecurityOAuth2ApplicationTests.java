@@ -1,4 +1,4 @@
-package com.dataus.template.securitybasic;
+package com.dataus.template.securityoauth2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
