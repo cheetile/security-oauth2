@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import com.dataus.template.securityoauth2.common.entity.BaseEntity;
@@ -88,6 +89,12 @@ public class Member extends BaseEntity {
     public void delete() {
         this.roles.forEach(MemberRole::delete);
         this.setDeleted(true);
+    }
+
+    @PrePersist
+    public void prePersist() {
+        this.setCreatedBy(this.username);
+        this.setLastModifiedBy(this.username);
     }
 
     public void modify(ModifyRequest modifyRequest) {

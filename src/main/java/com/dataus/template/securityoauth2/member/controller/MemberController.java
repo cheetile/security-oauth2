@@ -73,7 +73,7 @@ public class MemberController {
                 .body(memberService.deleteMember(id));        
     }
 
-    @PutMapping("/{id}/changeRoles")
+    @PutMapping("/{id}/roles")
     public ResponseEntity<?> changeRoles(
         @CurrentMember      OAuth2UserImpl principal,
         @PathVariable("id") Long id,
