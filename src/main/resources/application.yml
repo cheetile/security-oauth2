@@ -24,22 +24,22 @@ spring:
             client:
                 registration:
                     github:
-                        clientId: e8b57aa5ea243d475ced
-                        clientSecret: 743c8ef1d46f1e1467ecc10585a3d1a48eebc5fc
+                        clientId: githubClientId
+                        clientSecret: githubclientSecret
                         redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
                         scope:
                             - user:email
                             - read:user
                     google:
-                        clientId: 1059590504781-ip29uepiq6jpf91ais9r3nbrfhgagsv5.apps.googleusercontent.com
-                        clientSecret: 4lOnw-_HiXx0-R_1-ntiFx-8
+                        clientId: googleclientId
+                        clientSecret: googleclientSecret
                         redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
                         scope:
                             - email
                             - profile
                     facebook:
-                        clientId: 461829631817428
-                        clientSecret: c3f1d4193465404a7f4cb34f0b85267b
+                        clientId: facebookClientId
+                        clientSecret: facebookclientSecret
                         redirectUri: "{baseUrl}/oauth2/callback/{registrationId}" # Facebook은 이제 https 리디렉션 URI 사용을 요구하므로 앱이 프로덕션에서 https를 지원하는지 확인하세요.
                         scope:
                             - email
